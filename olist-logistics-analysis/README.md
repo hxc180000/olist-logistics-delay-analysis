@@ -13,6 +13,7 @@ matplotlib), Jupyter Notebook
 ## What I Found
 
 ### 1. Overall delay rate is low, but the impact is significant
+![Delay by State](charts/delay_by_state.png)
 
 About 8% of delivered orders arrived after the estimated 
 delivery date. That sounds small, but the effect on customer 
@@ -22,6 +23,7 @@ Delivery timing is clearly one of the biggest drivers of
 whether a customer leaves a good or bad review.
 
 ### 2. Geography matters
+![Delay vs Review Score](charts/delay_vs_review_score.png)
 
 Delay rates vary a lot by state. Large logistics hubs tend to 
 perform better — likely because of better infrastructure and 
@@ -31,6 +33,7 @@ reflect differences in logistics infrastructure and delivery
 distance.
 
 ### 3. Some product categories are consistently late
+![Delay by Category](charts/delay_by_category.png)
 
 Audio and fashion-related items show higher-than-average delay 
 rates. This could be due to shipping complexity, supplier 
