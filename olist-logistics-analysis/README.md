@@ -1,65 +1,53 @@
-# Olist Logistics Delay Analysis
+# Olist Delivery Performance Analysis
 
-This project explores delivery delays in the Brazilian Olist 
-e-commerce dataset. I wanted to understand what actually drives 
-late deliveries — whether it's geography, product type, or 
-something else.
+This project analyzes delivery performance using the Brazilian Olist e-commerce dataset (~100,000 records).  
+The goal was to understand how delivery delays impact customer satisfaction and identify where delays are most concentrated across regions and product categories.
 
-**Tools:** SQL (PostgreSQL via DBeaver), Python (pandas, 
-matplotlib), Jupyter Notebook
+**Tools used:** SQL, Python (pandas, numpy, matplotlib), Tableau
 
 ---
 
 ## What I Found
 
-### 1. Overall delay rate is low, but the impact is significant
-![Delay by State](charts/delay_by_state.png)
+### 1. The overall delay rate is low, but the impact is significant
+The overall delay rate is about **6.6%**, but the effect on customer satisfaction is clear.  
+On-time deliveries have an average rating of about **4.2**, while delayed orders drop to about **2.3**.
 
-About 8% of delivered orders arrived after the estimated 
-delivery date. That sounds small, but the effect on customer 
-satisfaction is striking: late orders averaged a review score 
-of **2.6 out of 5**, compared to **4.3** for on-time orders. 
-Delivery timing is clearly one of the biggest drivers of 
-whether a customer leaves a good or bad review.
+### 2. Delay rates vary a lot by state
+Some states have much higher delay rates than others.  
+For example, the highest-delay states are well above the overall average, which shows that delivery performance is not evenly distributed across regions.
 
-### 2. Geography matters
-![Delay vs Review Score](charts/delay_vs_review_score.png)
-
-Delay rates vary a lot by state. Large logistics hubs tend to 
-perform better — likely because of better infrastructure and 
-shorter distances to fulfillment centers. Some smaller or more 
-remote states show noticeably higher delay rates, which may 
-reflect differences in logistics infrastructure and delivery 
-distance.
-
-### 3. Some product categories are consistently late
-![Delay by Category](charts/delay_by_category.png)
-
-Audio and fashion-related items show higher-than-average delay 
-rates. This could be due to shipping complexity, supplier 
-locations, or how these items are packaged and handled. Either 
-way, product type is not a neutral factor in delivery 
-performance.
+### 3. Some product categories are more delay-prone
+Product categories such as **Furniture**, **Home Comfort**, and **Audio** have the highest delay rates.  
+This makes sense because bulky items or products that need more careful handling are harder to deliver on time.
 
 ---
 
-## What I Used
+## Dashboard Preview
 
-- SQL to query and aggregate the data across 8 tables
-- Python (pandas + matplotlib) to visualize the results
-- The public Olist Brazilian E-commerce dataset on Kaggle
+![Dashboard Preview](images/dashboard_final.png)
+
+**Live Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/huiyi.chen/viz/OlistDeliveryPerformanceDashboard_17761060332310/DeliveryPerformanceOverview)  
+(Interactive version of the dashboard built in Tableau)
 
 ---
 
+## Tools & Methods
 
-## Notes
+- **SQL**: joined and aggregated multiple tables
+- **Python**: data cleaning, validation, and exploratory analysis
+- **pandas / numpy**: data manipulation
+- **matplotlib**: initial visualizations
+- **Tableau**: dashboard design and final presentation
+- **Data**: the public Olist Brazilian E-commerce dataset on Kaggle
 
-This started as a SQL practice project but turned into 
-something I actually found interesting. The review score gap 
-between late and on-time deliveries (2.6 vs 4.3) was bigger 
-than I expected — it suggests that for e-commerce platforms, 
-hitting the estimated delivery date matters as much as the 
-product itself.
+---
 
-Next I want to look at whether seller shipping speed or carrier 
-performance is the bigger factor behind delays.
+## Key Takeaway
+
+Delivery delays are not evenly distributed.  
+They are concentrated in certain states and product categories, and they have a strong negative effect on customer ratings.  
+This makes those high-delay regions and product groups natural targets for further operational improvement.
+
+---
+
