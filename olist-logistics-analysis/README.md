@@ -25,7 +25,7 @@ This makes sense because bulky items or products that need more careful handling
 
 ## Dashboard Preview
 
-![Dashboard Preview](images/dashboard_final.png?v=2)
+![Dashboard Preview]([images/dashboard_final.png?v=2](https://github.com/hxc180000/olist-logistics-delay-analysis/blob/main/olist-logistics-analysis/images/dashboard_final.png))
 
 **Live Dashboard:** [View on Tableau Public](https://public.tableau.com/app/profile/huiyi.chen/viz/OlistDeliveryPerformanceDashboard_17761060332310/DeliveryPerformanceOverview)  
 (Interactive version of the dashboard built in Tableau)
